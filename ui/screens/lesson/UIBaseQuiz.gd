@@ -21,25 +21,25 @@ export var test_quiz: Resource
 var completed_before := false setget set_completed_before
 
 onready var _outline := $Outline as PanelContainer
-onready var _question := $ClipContentBoundary/ChoiceContainer/ChoiceView/QuizHeader/Question as RichTextLabel
-onready var _explanation := $ClipContentBoundary/ResultContainer/ResultView/Explanation as RichTextLabel
-onready var _content := $ClipContentBoundary/ChoiceContainer/ChoiceView/Content as RichTextLabel
+onready var _question := $ClipContentMargin/ClipContentBoundary/ChoiceContainer/ChoiceView/QuizHeader/Question as RichTextLabel
+onready var _explanation := $ClipContentMargin/ClipContentBoundary/ResultContainer/ResultView/Explanation as RichTextLabel
+onready var _content := $ClipContentMargin/ClipContentBoundary/ChoiceContainer/ChoiceView/Content as RichTextLabel
 onready var _completed_before_icon := (
-	$ClipContentBoundary/ChoiceContainer/ChoiceView/QuizHeader/CompletedBeforeIcon as TextureRect
+	$ClipContentMargin/ClipContentBoundary/ChoiceContainer/ChoiceView/QuizHeader/CompletedBeforeIcon as TextureRect
 )
 
-onready var _choice_container := $ClipContentBoundary/ChoiceContainer as MarginContainer
-onready var _result_container := $ClipContentBoundary/ResultContainer as MarginContainer
+onready var _choice_container := $ClipContentMargin/ClipContentBoundary/ChoiceContainer as MarginContainer
+onready var _result_container := $ClipContentMargin/ClipContentBoundary/ResultContainer as MarginContainer
 
-onready var _submit_button := $ClipContentBoundary/ChoiceContainer/ChoiceView/HBoxContainer/SubmitButton as Button
-onready var _skip_button := $ClipContentBoundary/ChoiceContainer/ChoiceView/HBoxContainer/SkipButton as Button
+onready var _submit_button := $ClipContentMargin/ClipContentBoundary/ChoiceContainer/ChoiceView/HBoxContainer/SubmitButton as Button
+onready var _skip_button := $ClipContentMargin/ClipContentBoundary/ChoiceContainer/ChoiceView/HBoxContainer/SkipButton as Button
 
-onready var _result_label := $ClipContentBoundary/ResultContainer/ResultView/Label as Label
-onready var _correct_answer_label := $ClipContentBoundary/ResultContainer/ResultView/CorrectAnswer as Label
+onready var _result_label := $ClipContentMargin/ClipContentBoundary/ResultContainer/ResultView/Label as Label
+onready var _correct_answer_label := $ClipContentMargin/ClipContentBoundary/ResultContainer/ResultView/CorrectAnswer as Label
 
 onready var _error_tween := $ErrorTween as Tween
 onready var _size_tween := $SizeTween as Tween
-onready var _help_message := $ClipContentBoundary/ChoiceContainer/ChoiceView/HelpMessage as Label
+onready var _help_message := $ClipContentMargin/ClipContentBoundary/ChoiceContainer/ChoiceView/HelpMessage as Label
 
 var _quiz: Quiz
 var _shake_pos: float = 0
